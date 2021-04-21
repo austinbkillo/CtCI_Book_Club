@@ -2,6 +2,7 @@
 
 const URLify = (str) => {
   //You write code here
-};
+  return str.split(' ').join('%20');
+}
 
 module.exports = URLify;

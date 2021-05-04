@@ -18,6 +18,15 @@ function Node(val) {
 
 const deleteMiddle = (node) => {
   //Please code here
+  //copy the next node first
+  node.val = node.next.val;
+
+  //now remove the strings
+  node.next = node.next.next;
+
+
+
+
 };
 
 module.exports = deleteMiddle;

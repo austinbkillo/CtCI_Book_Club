@@ -12,6 +12,20 @@ function Node(val) {
 
 function removeDups(head) {
   // solution
+  const storage = {};
+  let prev = null;
+  let current = head;
+  while (current) {
+    if (storage[current.val]) {
+      prev.next = current.next;
+    } else {
+      storage[current.val] = 1;
+      prev = current;
+    }
+
+    current = current.next;
+  }
+  return head;
 }
 
 module.exports = removeDups;
